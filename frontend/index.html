@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Controls</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: sans-serif;
+                outline: none;
+			}
+			button {
+				border: none;
+				background: transparent;
+			}
+			body {
+				width: 100%;
+				height: 100vh;
+                background-color: black;
+		    	display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			main {
+				background-color: rgba(0, 0, 0, 0.493);
+				/* backdrop-filter: blur(2px); */
+				color: white;
+				min-width: 35%;
+				padding: 2em;
+				height: 90vh;
+				border-radius: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+
+				font-weight: 100;
+			}
+			.motion{
+               padding: 10px 20px;
+               font-size: 24px;
+               text-align: center;
+               outline: none;
+               color: #fff;
+               background-color: #2f4468;
+               border: none;
+               border-radius: 5px;
+               box-shadow: 0 6px #999;
+               cursor: pointer;
+              -webkit-touch-callout: none;
+              -webkit-user-select: none;
+              -khtml-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+               user-select: none;
+              -webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+			
+			
+			h1 {
+				font-weight: normal;
+			}
+			
+		
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+			}
+            .MOTION{
+				height: 80%;
+				margin-top: 0%;
+                display: block;
+              
+			}
+			h1{
+                margin-bottom: 50px;
+            }
+			 .motion:hover {background-color: #1f2e45}
+             .motion:active {
+              background-color: #1f2e45;
+              box-shadow: 0 4px #666;
+              transform: translateY(2px);
+      }
+			
+			
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Controls</h1>
+			
+			<div class="MOTION">
+				<button class="motion" id="btn1" onmousedown="togglecheckbox('forward');" onmouseup="togglecheckbox('stop');">Forward</button>
+			</div>
+
+            <div class="MOTION">
+                <button class="motion" id="btn2" onmousedown="togglecheckbox('backward');" onmouseup="togglecheckbox('stop');">Backward</button>
+            </div>
+
+            <div class="MOTION">
+                <button class="motion" id="btn3" onmousedown="togglecheckbox('left');" onmouseup="togglecheckbox('stop');">Left</button>
+            </div>
+
+            <div class="MOTION">   
+                <button class="motion" id="btn4" onmousedown="togglecheckbox('right');" onmouseup="togglecheckbox('stop');">Right</button>
+            </div>
+
+			
+			
+		</main>
+		<script>
+		
+        let yourUrl="api/motion";
+		function togglecheckbox(parameter){
+			fetch("/api/motion", { method: "POST", body: JSON.stringify({ "motion" : parameter }) });
+		}  
+		</script>
+	</body>
+</html>
