@@ -1,6 +1,6 @@
-# Air-Mouse
+# WiFi Controlled Bot
 
-Air-Mouse - Moves mouse cursor,Using ESP-32 & MPU6050(6-axis Accelerometer & Gyroscope) in 3D space with Bluetooth and Buttons support.
+WiFi Controlled Bot - Moves the bot in desired direction at press of a button.
 
 ## Table of Contents
 
@@ -20,10 +20,7 @@ Air-Mouse - Moves mouse cursor,Using ESP-32 & MPU6050(6-axis Accelerometer & Gyr
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-* The Aim of the Project is to make a Mouse using the data fusion DMP(Digital Motion Processing) of MPU_6050 and ESP32 with Bluetooth support to actually make it    easier for the user to move pointer in any position they want.
-* The Support for Right and Left click is also established using Capacitive touch pins of ESP32.
-   
-   ![](docs/results/Air-Mouse.png)
+* The Aim of the Project is to add WiFi controll over the motion of the bot using ESP32.
 
 ### Tech Stack
 The Technologies used for this project are
@@ -32,18 +29,18 @@ The Technologies used for this project are
 
 ### File Structure
     .
-    ├── Components              # Contains files of specific library of functions or Hardware used
-    │    ├──I2Cdev              # Library for I2C communication
-    │    ├──MPU6050             # Library for MPU6050 sensor
-    │    ├──CMakeLists.txt      # contains commands to include the given component in a esp-idf 
-    ├── docs                    # Documentation files 
-    │   ├── report.pdf          # Project report
-    │   └── results             # Folder containing screenshots, gifs, videos of results
-    ├── main                    # Source files (alternatively `lib` or `app`)
-    │   ├──main.c               # Main Source code to be executed
-    │   ├──kconfig.projbuild    # defines the entries of the menu for configuration
-    │   ├──CMakeLists.txt       # contains commands to include the bluetooth library and main.c in esp-idf
-    ├── CmakeLists.txt          # contains commands to include Components and main folder while executing
+    ├── Components                           # Contains files of specific library of functions or Hardware used
+    │    ├──sra-board-component              # Library for motor drivers
+    ├── frontend                             # Frontend file
+    │   ├── index.htnl                       # Code for frontend 
+    ├── main                                 # Source files (alternatively `lib` or `app`)
+    │   ├──main.c                            # Main Source code to be executed
+    |   ├──tuning_http_server.c              # Source code for http server
+    |   ├──motion.c                          # Source code for motion of the bot
+    |   ├──wifi_handler.c                    # Source code for handling wifi operations
+    │   ├──kconfig.projbuild                 # defines the entries of the menu for configuration
+    │   ├──CMakeLists.txt                    # contains commands to include the bluetooth library and main.c in esp-idf
+    ├── CmakeLists.txt                       # contains commands to include Components and main folder while executing
     ├── LICENSE
     └── README.md 
  
@@ -79,37 +76,16 @@ idf.py -p (PORT) flash monitor
 idf.py menuconfig
 ```
 * `Example Connection Configuration`
-  * `Bluetooth Name` - Set Bluetooth Name
+  * `WiFi SSID` - Set wifi SSID
+  * `WiFi PASSWORD` - Set wifi Password
   
-* `MPU6050 Configuration
-  * `SDA Pin No.` - Set SDA Pin No.
-  * `CLK Pin No.` - Set CLK Pin No.
-* The default Pin configuration used to connect MPU_6050 with ESP32 in this project is shown ![](docs/results/Esp-32andmpu6050_pin_connection.png)  ![](docs/results/Air-Mouse_diagram.png)
-  
-## Results and Demo
-The use of Right and Left Capacitive touch pins has been demonstrated in the following videos
 
- [Right/left buttons](https://github.com/gautam-dev-maker/Air-Mouse/blob/master/docs/results/Right-Left%20click.mp4)
- 
- ## Troubleshooting
- While Configuring for the first time if Bluetooth is not working then ,go to terminal
- 
-```
-idf.py menuconfig
-```
-Then go to components/bluetooth and enable bluetooth
-Press ctrl+s to save the configuration
-then
-```
-idf.py build
-```
 ## Contributors
-* [Aman Chhaparia](https://github.com/amanchhaparia)
-* [Gautam Agrawal](https://github.com/gautam-dev-maker)
+* [Moteen Shah](https://github.com/Jamm02)
 
 ## Acknowledgements and Resources
 * [SRA VJTI](http://sra.vjti.info/) Eklavya 2020 
-* Special thanks to [Vedant Paranjape](https://github.com/VedantParanjape)
+* Special thanks to [Gautam Agarwal](https://github.com/gautam-dev-maker)
 * Jeff Rowberg for the MPU6050 library for esp-idf :
   https://github.com/jrowberg/i2cdevlib/tree/master/ESP32_ESP-IDF   
 * https://github.com/nkolban/esp32-snippets
@@ -117,7 +93,7 @@ idf.py build
 
   
 ## License
-The [License](https://github.com/gautam-dev-maker/Air-Mouse/blob/master/LICENSE) Used for this Project.
+The [License](https://github.com/Jamm02/#/blob/master/LICENSE) Used for this Project.
   
   
   
