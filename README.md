@@ -53,9 +53,9 @@ Install ESP-IDF : https://github.com/espressif/esp-idf
 ### Installation
 Clone the project
 ```
-https://github.com/gautam-dev-maker/Air-Mouse.git
+https://github.com/Jamm02/Wall-E-WiFi-Controlled-Bot.git
 
-cd Air-Mouse
+cd Wall-E-WiFi-Controlled-Bot
 ```
 ## Usage
 
