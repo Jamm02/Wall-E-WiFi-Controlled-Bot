@@ -92,7 +92,7 @@ idf.py menuconfig
 
   
 ## License
-The [License](https://github.com/Jamm02/#/blob/master/LICENSE) Used for this Project.
+The [License](https://github.com/Jamm02/Wall-E-WiFi-Controlled-Bot/blob/master/LICENSE) Used for this Project.
   
   
   
