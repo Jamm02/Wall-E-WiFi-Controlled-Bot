@@ -28,7 +28,7 @@ The Technologies used for this project are
 ### File Structure
     .
     ├── Components                           # Contains files of specific library of functions or Hardware used
-    │    ├──sra-board-component              # Library for motor drivers
+    │   ├──sra-board-component               # Library for motor drivers
     ├── frontend                             # Frontend file
     │   ├── index.htnl                       # Code for frontend 
     ├── main                                 # Source files (alternatively `lib` or `app`)
@@ -82,7 +82,8 @@ idf.py menuconfig
 * [Moteen Shah](https://github.com/Jamm02)
 
 ## Acknowledgements and Resources
-* [SRA VJTI](http://sra.vjti.info/) Eklavya 2020 
+* [SRA VJTI](http://sra.vjti.info)
+* [SRA Wall-E Workshop](https://github.com/SRA-VJTI/Wall-E_v2.2)
 * Special thanks to [Gautam Agarwal](https://github.com/gautam-dev-maker)
 * Jeff Rowberg for the MPU6050 library for esp-idf :
   https://github.com/jrowberg/i2cdevlib/tree/master/ESP32_ESP-IDF   
