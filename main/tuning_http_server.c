@@ -4,14 +4,8 @@
 #include <math.h>
 #include "motion.h"
 
-
-
 static const char *TAG = "tuning_http_server";
 static char scratch[SCRATCH_BUFSIZE];
-
-
-
-
 
 static void initialise_mdns(void)
 {
@@ -82,7 +76,6 @@ static esp_err_t set_content_type_from_file(httpd_req_t *req, const char *filepa
 /* Send HTTP response with the contents of the requested file */
 static esp_err_t rest_common_get_handler(httpd_req_t *req)
 {
-   enable_motor_driver(a, NORMAL_MODE); // Enable motor driver A in Normal Mode
  char filepath[FILE_PATH_MAX] = WEB_MOUNT_POINT;
 
     if (strlen(req->uri) > 0 && req->uri[strlen(req->uri) - 1] == '/') 
@@ -133,7 +126,7 @@ static esp_err_t rest_common_get_handler(httpd_req_t *req)
     return ESP_OK;
 }
 
-/* Simple handler for light brightness control */
+/* Simple handler for on button press handling */
 static esp_err_t click_post_handler(httpd_req_t *req)
 {
    
@@ -160,7 +153,9 @@ static esp_err_t click_post_handler(httpd_req_t *req)
             
             char *str=received_message->valuestring;
             ESP_LOGI(TAG, "motion:- %s", received_message->valuestring);
-            if(!strcmp(str, "forward"))
+
+// comparing the data fetched and moving the bot accordingly
+            if(!strcmp(str, "f"))
               {
                  forward();
               }
@@ -193,11 +188,7 @@ static esp_err_t click_post_handler(httpd_req_t *req)
         return ESP_OK;
     }
    
-  //  cJSON *payload = cJSON_Parse(buffer);
-  //  cJSON *motion = cJSON_GetObjectItem(payload,"motion");
-  //  ESP_LOGI(TAG, payload);
    httpd_resp_send_err(req, HTTPD_400_BAD_REQUEST, "invalid json");
-  // cJSON_Delete(motion);
     return ESP_OK;
 }
 
