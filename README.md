@@ -7,6 +7,7 @@ WiFi Controlled Bot - Moves the bot in desired direction at press of a button.
 * [About the Project](#about-the-project)
   * [Tech Stack](#tech-stack)
   * [File Structure](#file-structure)
+  * [Data Processing](#data-processing)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -17,8 +18,6 @@ WiFi Controlled Bot - Moves the bot in desired direction at press of a button.
 * [License](#license)
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-* The Aim of the Project is to add WiFi controll over the motion of the bot using ESP32.
 
 ### Tech Stack
 The Technologies used for this project are
@@ -42,8 +41,14 @@ The Technologies used for this project are
     ├── LICENSE
     └── README.md 
  
+### Data Processing:
+* Data of button press is relayed from the frontend to the server(ESP32) using JSON.
+```
+fetch("/api/motion", { method: "POST", body: JSON.stringify({ "motion" : parameter }) });
 
-
+parameters: forward,backward,left,right
+```
+* The data fetched is then decoded using cJSON and hence ESP32 gets to kmow about the input provided by the user.
 
 ## Getting Started
 
@@ -82,13 +87,13 @@ idf.py menuconfig
 * [Moteen Shah](https://github.com/Jamm02)
 
 ## Acknowledgements and Resources
-* [SRA VJTI](http://sra.vjti.info)
+* [SRA VJTI](https://github.com/SRA-VJTI)
 * [SRA Wall-E Workshop](https://github.com/SRA-VJTI/Wall-E_v2.2)
 * Special thanks to [Gautam Agarwal](https://github.com/gautam-dev-maker)
 * Jeff Rowberg for the MPU6050 library for esp-idf :
   https://github.com/jrowberg/i2cdevlib/tree/master/ESP32_ESP-IDF   
 * https://github.com/nkolban/esp32-snippets
-* https://github.com/VedantParanjape/idf-notes-sra
+
 
   
 ## License
