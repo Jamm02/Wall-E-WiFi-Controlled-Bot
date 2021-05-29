@@ -44,7 +44,7 @@ The Technologies used for this project are
 ### Data Processing:
 * Data of button press is relayed from the frontend to the server(ESP32) using JSON.
 ```
-fetch("/api/motion", { method: "POST", body: JSON.stringify({ "motion" : parameter }) });
+ { method: "POST", body: JSON.stringify({ "motion" : parameter }) }
 
 parameters: forward,backward,left,right
 ```
