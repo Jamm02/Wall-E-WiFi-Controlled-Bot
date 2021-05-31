@@ -97,6 +97,9 @@ idf.py menuconfig
 * Jeff Rowberg for the MPU6050 library for esp-idf :
   https://github.com/jrowberg/i2cdevlib/tree/master/ESP32_ESP-IDF   
 * https://github.com/nkolban/esp32-snippets
+* https://github.com/DaveGamble/cJSON
+* https://github.com/espressif/esp-idf/tree/release/v4.2/examples/protocols/http_server
+* https://youtu.be/44Kqyphvlxk
 
 
   
