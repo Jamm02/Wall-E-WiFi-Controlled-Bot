@@ -5,10 +5,10 @@
 void forward(){
 
                                 // setting motor speed of MOTOR A0 in forward direction with duty cycle
-				set_motor_speed(MOTOR_A_0, MOTOR_FORWARD, 50);
+				set_motor_speed(MOTOR_A_0, MOTOR_FORWARD, 60);
 
 				// setting motor speed of MOTOR A1 in forward direction with duty cycle
-				set_motor_speed(MOTOR_A_1, MOTOR_FORWARD, 50);
+				set_motor_speed(MOTOR_A_1, MOTOR_FORWARD, 60);
 
 }
 
@@ -24,7 +24,7 @@ void backward(){
 void left(){
  
                                 // setting motor speed of MOTOR A1 in backward direction with duty cycle
-				set_motor_speed(MOTOR_A_1, MOTOR_FORWARD, 55);
+				set_motor_speed(MOTOR_A_1, MOTOR_FORWARD, 65);
                
 }
 
@@ -32,7 +32,7 @@ void right(){
 
 
                                  // setting motor speed of MOTOR A0 in backward direction with duty cycle
-				set_motor_speed(MOTOR_A_0, MOTOR_FORWARD, 55);
+				set_motor_speed(MOTOR_A_0, MOTOR_FORWARD, 65);
                
 }
 
