@@ -101,7 +101,6 @@ idf.py menuconfig
 * [SRA VJTI](https://github.com/SRA-VJTI)
 * [SRA Wall-E Workshop](https://github.com/SRA-VJTI/Wall-E_v2.2)
 * Special thanks to [Gautam Agarwal](https://github.com/gautam-dev-maker)
-* Jeff Rowberg for the MPU6050 library for esp-idf : 
 * https://github.com/nkolban/esp32-snippets
 * https://github.com/DaveGamble/cJSON
 * https://github.com/espressif/esp-idf/tree/release/v4.2/examples/protocols/http_server
