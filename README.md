@@ -4,6 +4,7 @@ WiFi Controlled Bot - Moves the bot in desired direction at press of a button.
 
 ## Table of Contents
 
+* [Demonstartions](#Demonsrations)
 * [About the Project](#about-the-project)
   * [Tech Stack](#tech-stack)
   * [File Structure](#file-structure)
@@ -17,9 +18,11 @@ WiFi Controlled Bot - Moves the bot in desired direction at press of a button.
 * [Acknowledgements and Resources](#acknowledgements-and-resources)
 * [License](#license)
 
-<!-- ABOUT THE PROJECT -->
 
-https://user-images.githubusercontent.com/84293091/120161465-f4600500-c214-11eb-883d-9611f1929152.gif
+<!-- Demonstrations -->
+
+![Bot](https://user-images.githubusercontent.com/84293091/120164530-4e15fe80-c218-11eb-8234-84aeb8ff666e.gif)
+<!-- ABOUT THE PROJECT -->
 
 ### Tech Stack
 The Technologies used for this project are
