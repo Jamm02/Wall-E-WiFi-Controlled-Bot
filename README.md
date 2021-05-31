@@ -19,6 +19,8 @@ WiFi Controlled Bot - Moves the bot in desired direction at press of a button.
 
 <!-- ABOUT THE PROJECT -->
 
+https://user-images.githubusercontent.com/84293091/120161465-f4600500-c214-11eb-883d-9611f1929152.gif
+
 ### Tech Stack
 The Technologies used for this project are
 * [FreeRTOS](https://www.freertos.org/openrtos.html)
@@ -44,8 +46,10 @@ The Technologies used for this project are
 ### Data Processing:
 * Data of button press is relayed from the frontend to the server(ESP32) using JSON.
 ```
- { method: "POST", body: JSON.stringify({ "motion" : parameter }) }
-
+JSON format:
+{
+   motion:parameter
+}  
 parameters: forward,backward,left,right
 ```
 * The data fetched is then decoded using cJSON and hence ESP32 gets to kmow about the input provided by the user.
