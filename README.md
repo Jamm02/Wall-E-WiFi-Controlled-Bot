@@ -34,9 +34,9 @@ The Technologies used for this project are
     │   ├── index.htnl                       # Code for frontend 
     ├── main                                 # Source files (alternatively `lib` or `app`)
     │   ├──main.c                            # Main Source code to be executed
-    |   ├──tuning_http_server.c              # Source code for http server
-    |   ├──motion.c                          # Source code for motion of the bot
-    |   ├──wifi_handler.c                    # Source code for handling wifi operations
+     |   ├──tuning_http_server.c              # Source code for http server
+     |   ├──motion.c                          # Source code for motion of the bot
+     |   ├──wifi_handler.c                    # Source code for handling wifi operations
     │   ├──kconfig.projbuild                 # defines the entries of the menu for configuration
     │   ├──CMakeLists.txt                    # contains commands to include the bluetooth library and main.c in esp-idf
     ├── CmakeLists.txt                       # contains commands to include Components and main folder while executing
