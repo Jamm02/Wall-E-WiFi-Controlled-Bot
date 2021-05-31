@@ -4,7 +4,7 @@ WiFi Controlled Bot - Moves the bot in desired direction at press of a button.
 
 ## Table of Contents
 
-* [Demonstartions](#Demonsrations)
+* [Demonstartions](#demonsrations)
 * [About the Project](#about-the-project)
   * [Tech Stack](#tech-stack)
   * [File Structure](#file-structure)
