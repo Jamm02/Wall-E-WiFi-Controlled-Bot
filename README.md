@@ -20,10 +20,10 @@ WiFi Controlled Bot - Moves the bot in desired direction at press of a button.
 
 
 <!-- Demonstrations -->
-
+# Demonstrations
 ![Bot](https://user-images.githubusercontent.com/84293091/120164530-4e15fe80-c218-11eb-8234-84aeb8ff666e.gif)
 <!-- ABOUT THE PROJECT -->
-
+# About the project
 ### Tech Stack
 The Technologies used for this project are
 * [FreeRTOS](https://www.freertos.org/openrtos.html)
